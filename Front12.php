@@ -25,6 +25,13 @@ foreach($fruits as $fruits){
     echo"\n";
   }
   }
-  
+  $animals = [
+    "cat" => "猫",
+    "dog" => "犬",
+    ];
+    $animals["bird"] = "鳥";
+    echo $animals["bird"];
+    
+    
 
   

@@ -81,11 +81,11 @@ echo '\n';
 //Unixタイムスタンプを書式化する
 
 echo time();
-echo '\n';
+echo "\n";
 
 $time = mktime(0, 0, 0, 15, 3, 2023);
 print date ('Y年m月d日h時i分秒s', $time);
-echo '\n';
+echo "\n";
 
 
 /*配列の中で1番大きい値を返す max_array という関数を実装
@@ -96,14 +96,18 @@ foreach($arr as $a){
   return $max_number;
 }
 */
-$namber =  array(1, 3, 5, 7, 9);
-    $max_namber = 0;
-        function max_array($arr){
-        foreach($arr as $a){
-            $max_number = max($a);
+
+$namber = array(1, 3, 9, 5, 7,);
+
+function max_array($arr){
+    $max_number = $arr[0];    
+    foreach($arr as $a){
+        if($max_number < $a){
+            $max_number = $a;
+        }
     }
-        return $max_namber = max_array($namber);
+    return $max_number;
 }
-echo $max_namber;
+
 echo max_array($namber);
 echo "\n";
